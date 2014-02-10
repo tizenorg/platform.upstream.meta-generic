@@ -24,11 +24,13 @@ Default:
         - Base System
         - Console Tools
         - Generic Packaging
+        - Generic Automated QA Tools
     PostScripts:
         - base-general
         - rpm
         - optimization
         - customize
+        - autoqa
     NoChrootScripts:
         - buildname  
 
