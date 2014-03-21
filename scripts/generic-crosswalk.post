@@ -5,6 +5,30 @@ if [ -d /usr/lib64/xwalk ]; then
 	ln -s ../lib64/xwalk /usr/lib
 fi
 
+# Initialize the native application database
+pkg_initdb
+
+# start wrt widgets preinstall
+prepare_widgets.sh
+
+# install widgets at first run
+cat <<EOF >/lib/systemd/user/xwalk_widgets_preinstall.service
+[Unit]
+Description=Installation of pre-installed widgets
+ConditionPathExists=!/home/app/.config/xwalk-service/applications.db
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/install_widgets.sh
+
+[Install]
+WantedBy=xwalk.target
+EOF
+ln -sf ../xwalk_widgets_preinstall.service /lib/systemd/user/xwalk.target.wants/xwalk_widgets_preinstall.service
+
+
+# add launchers to weston.ini
+
 if [ -f /usr/bin/weston ]; then
 
 	cat >>/etc/xdg/weston/weston.ini <<EOF
@@ -13,11 +37,17 @@ if [ -f /usr/bin/weston ]; then
 
 [launcher]
 icon=/usr/share/icons/tizen/32x32/web-browser.png
-path=/usr/lib64/xwalk/xwalk http://www.tizen.org
+path=/usr/lib64/xwalk/xwalk http://www.google.com
 
 [launcher]
-icon=/usr/share/icons/tizen/32x32/web-browser.png
-path=/usr/lib64/xwalk/xwalk http://www.google.com
+icon=/usr/share/icons/tizen/32x32/annex.png
+path=/usr/bin/xwalk-launcher hnabpnbionlaokfnobomjleblmmiefig
+
+[launcher]
+icon=/usr/share/icons/tizen/32x32/bubblewrap.png
+path=/usr/bin/xwalk-launcher kmnbdhfbkjkeilhpbooaecgpllbollfn
+
 EOF
 
 fi
+
