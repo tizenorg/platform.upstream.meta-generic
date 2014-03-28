@@ -15,3 +15,6 @@ Repositories:
         Url:  http://download.tizen.org/snapshots/tizen/generic/generic-x11-x86_64/@BUILD_ID@/repos/generic/@ARCH@/packages/
         Options: --ssl_verify=no
 
+    -   Name: override
+        Url: file:///usr/local/share/repos/kdbus/
+        Options:
