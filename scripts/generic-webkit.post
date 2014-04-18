@@ -27,11 +27,6 @@ pkg_initdb
 prepare_widgets.sh
 install_widgets.sh
 
-# Needed to fix TIVI-1629
-if [ -x /usr/bin/vconftool ]; then
-	vconftool set -t int -f db/setting/default_memory/wap 0
-fi
-
 if [ -f /usr/bin/weston ]; then
 
 	cat >>/etc/xdg/weston/weston.ini <<EOF
