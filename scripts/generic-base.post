@@ -68,3 +68,8 @@ diff -urN bad/etc/pam.d/systemd-user good/etc/pam.d/systemd-user
  auth required pam_deny.so
  password required pam_deny.so
 EOF
+
+# Needed to fix TIVI-1629
+if [ -x /usr/bin/vconftool ]; then
+	vconftool set -t int -f db/setting/default_memory/wap 0
+fi
