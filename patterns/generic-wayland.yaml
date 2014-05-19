@@ -1,0 +1,13 @@
+Summary: Generic Wayland
+Description: Generic Wayland
+Name: generic-wayland
+Packages:
+- cantarell-fonts
+- dejavu-fonts
+- weston
+- weston-clients
+- mesa
+- xkeyboard-config
+- tizen-branding-default
+- user-session-units
+- desktop-skin

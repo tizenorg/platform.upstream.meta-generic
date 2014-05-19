@@ -1,0 +1,5 @@
+Summary: Generic Adaptation
+Description: Generic Adaptation
+Name: generic-adaptation
+Packages:
+- linux-firmware
