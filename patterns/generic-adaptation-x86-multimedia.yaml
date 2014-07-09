@@ -1,0 +1,8 @@
+Summary: Generic Adaptation x86 Multimedia
+Description: Generic Adaptation x86 Multimedia
+Name: generic-adaptation-x86-multimedia
+Packages:
+- gst-libav
+- gstreamer-vaapi
+- libva-intel-driver
+- vaapi-tools
