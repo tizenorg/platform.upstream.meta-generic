@@ -1,0 +1,8 @@
+Summary: Generic Multimedia Intel
+Description: Generic Multimedia Intel
+Name: generic-multimedia-intel
+Packages:
+- gst-libav
+- gstreamer-vaapi
+- libva-intel-driver
+- vaapi-tools

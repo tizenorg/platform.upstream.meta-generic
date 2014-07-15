@@ -1,0 +1,9 @@
+Summary: Generic X11
+Description: Generic X11
+Name: generic-x11
+Packages:
+- xorg-server
+- xorg-launch-helper
+- enlightenment
+- user-session-units
+

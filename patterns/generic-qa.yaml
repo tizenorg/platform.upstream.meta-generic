@@ -9,7 +9,5 @@ Packages:
 - eet-tools
 - gdb
 - gstreamer-utils
-- neard-test
-- ofono-test
 - python-xml
 - wget

@@ -30,3 +30,4 @@ Packages:
 - default-ac-domains
 - wpa_supplicant
 - prelink
+- usbutils

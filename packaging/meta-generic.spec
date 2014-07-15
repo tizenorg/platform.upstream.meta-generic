@@ -24,4 +24,6 @@ make
 
 %files
 %manifest %{name}.manifest
-/usr/share/package-groups/generic/*.yaml
+%attr(644,-,-) %{_datadir}/package-groups/generic/*.yaml
+%{_datadir}/image-configurations/generic/scripts
+

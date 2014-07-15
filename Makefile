@@ -15,7 +15,9 @@ all:
 
 install:
 	install -d ${DESTDIR}/usr/share/package-groups/generic
+	install -d ${DESTDIR}/usr/share/image-configurations/generic/scripts
 	install -m 644 patterns/*.yaml ${DESTDIR}/usr/share/package-groups/generic
+	install -D scripts/* ${DESTDIR}/usr/share/image-configurations/generic/scripts
 
 test:
 	merge-patterns -o output/ -p patterns -s

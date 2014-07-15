@@ -2,5 +2,4 @@ Summary: Generic Qt5
 Description: Generic Qt5
 Name: generic-qt5
 Packages:
-- qt5-tools
-- qt5-qtdeclarative-examples
+- qt-tizen-full

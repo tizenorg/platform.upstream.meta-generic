@@ -4,5 +4,4 @@ Name: generic-crosswalk
 Packages:
 - crosswalk
 - tizen-extensions-crosswalk
-- wrt-widgets
 

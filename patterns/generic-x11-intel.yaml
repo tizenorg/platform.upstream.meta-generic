@@ -1,0 +1,8 @@
+Summary: Generic X11 Intel
+Description: Generic X11 Intel
+Name: generic-x11-intel
+Packages:
+- xf86-input-synaptics
+- xf86-video-intel
+- xf86-input-keyboard
+
