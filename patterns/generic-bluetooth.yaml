@@ -7,3 +7,4 @@ Packages:
 - bluetooth-frwk-service
 - bluetooth-share
 - bluetooth-tools-no-firmware
+- obexd
