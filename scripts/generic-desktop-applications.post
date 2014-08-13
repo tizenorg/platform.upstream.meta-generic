@@ -9,6 +9,9 @@ pkg_initdb
 echo "Fixing multiuser app_info dbs"
 chsmack -a "_" $TZ_SYS_DB/.app_info.db*
 chmod 764 $TZ_SYS_DB/.app_info.db*
+echo "Fixing multiuser pkgmgr-info dbs"
+chsmack -a "_" $TZ_SYS_DB/.pkgmgr*.db*
+chmod 764 $TZ_SYS_DB/.pkgmgr*.db*
 
 # depends on generic-base functions
 function generic_desktop_applications_fix_userhome() {
@@ -19,18 +22,6 @@ function generic_desktop_applications_fix_userhome() {
 	
 	echo "Fix app_info.db of $user"
 	chown -R $user:users $homedir/.applications/dbspace/
-
-	if [ -f $homedir/.applications/dbspace/.app_info.db ]; then
-		sqlite3 $homedir/.applications/dbspace/.app_info.db <<EOF
-attach database '$TZ_SYS_DB/.app_info.db' as common;
-insert into app_info select * from common.app_info;
-EOF
-	else
-		cp $TZ_SYS_DB/.app_info.db $homedir/.applications/dbspace/.app_info.db
-	fi
-
-	chown -R $user:users $homedir/.applications/dbspace/
-	chsmack -a User $homedir/.applications/dbspace/.app_info.db*
 }
 
 # fix app user
