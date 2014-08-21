@@ -11,6 +11,5 @@ Packages:
 - notification-service
 - pkgmgr-server
 - sqlite3
-- usb-server
 - sdbd
 - security-server
