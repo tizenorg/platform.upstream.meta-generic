@@ -1,0 +1,8 @@
+Summary: Generic Setup Boot
+Description: Generic Setup Boot
+Name: generic-setup-boot
+Packages:
+- gummiboot-splash
+- setup-scripts-gummiboot
+- setup-scripts-clone
+- gptfdisk
