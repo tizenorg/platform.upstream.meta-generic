@@ -3,7 +3,7 @@ Description: Generic Middleware
 Name: generic-middleware
 Packages:
 - calendar-service
-- csr-framework
+- csf-framework
 - elm-misc
 - efl-theme-tizen-hd
 - evolution-data-server
