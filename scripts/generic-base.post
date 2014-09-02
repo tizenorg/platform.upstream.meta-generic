@@ -73,6 +73,22 @@ function generic_base_fix_user_homedir() {
 # create appfw dirs for user 'app'
 generic_base_fix_user_homedir app
 
+# create content dirs inside homes
+function generic_base_fix_user_shared_entry() {
+        user=$1
+        generic_base_user_exists $user || return 1
+
+        . /etc/tizen-platform.conf
+
+        homedir=$(generic_base_user_home $user)
+
+        mkdir -p $homedir/$TZ_SYS_USER_SHARED_ENTRY
+        return 0
+}
+
+# create content dirs for user 'app'
+generic_base_fix_user_shared_entry app
+
 # adjust app group: main group 'users', extra group 'app'
 usermod -g users app
 usermod -G app app
