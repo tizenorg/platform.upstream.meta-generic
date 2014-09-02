@@ -2,7 +2,6 @@ Summary: Generic Console Tools
 Description: Generic Console Tools
 Name: generic-console-tools
 Packages:
-- snapper-zypp-plugin
 - tar
 - wget
 - grep
