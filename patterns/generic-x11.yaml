@@ -6,4 +6,5 @@ Packages:
 - xorg-launch-helper
 - enlightenment
 - user-session-units
+- xf86-input-evdev
 
