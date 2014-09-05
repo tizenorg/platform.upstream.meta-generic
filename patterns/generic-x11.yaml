@@ -4,6 +4,7 @@ Name: generic-x11
 Packages:
 - xorg-server
 - xorg-launch-helper
+- monotype-fonts
 - enlightenment
 - user-session-units
 - xf86-input-evdev
