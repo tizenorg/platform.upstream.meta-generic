@@ -62,7 +62,7 @@ function generic_base_fix_user_homedir() {
 	generic_base_user_exists $user || return 1
 
 	homedir=$(generic_base_user_home $user)
-	for appdir in desktop manifest dbspace; do
+	for appdir in desktop manifest dbspace icons; do
 		mkdir -p $homedir/.applications/$appdir
 	done
 	find $homedir -type d -exec chsmack -a User {} \;

@@ -1,8 +1,20 @@
 #!/bin/sh
 echo "#################### generic-desktop-applications.post ####################"
 
-# temp workaround to fill each user app_info database with global db infos
 . /etc/tizen-platform.conf
+
+# change smack labels for global database dirs (must be done before ail_initdb)
+echo "Fixing multiuser $TZ_SYS_DB"
+chsmack -a "*" $TZ_SYS_DB
+echo "Fixing multiuser $TZ_SYS_RW_APP"
+chsmack -a "*" $TZ_SYS_RW_APP
+echo "Fixing multiuser $TZ_SYS_RW_DESKTOP_APP"
+mkdir -p $TZ_SYS_RW_DESKTOP_APP/tizen
+chsmack -a "*" $TZ_SYS_RW_DESKTOP_APP
+chsmack -a "*" $TZ_SYS_RW_DESKTOP_APP/tizen
+chmod -R g+w $TZ_SYS_RW_DESKTOP_APP
+
+# temp workaround to fill each user app_info database with global db infos
 ail_initdb
 pkg_initdb
 
