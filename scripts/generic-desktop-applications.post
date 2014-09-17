@@ -6,12 +6,19 @@ echo "#################### generic-desktop-applications.post ###################
 ail_initdb
 pkg_initdb
 
-echo "Fixing multiuser app_info dbs"
-chsmack -a "_" $TZ_SYS_DB/.app_info.db*
-chmod 764 $TZ_SYS_DB/.app_info.db*
-echo "Fixing multiuser pkgmgr-info dbs"
-chsmack -a "_" $TZ_SYS_DB/.pkgmgr*.db*
-chmod 764 $TZ_SYS_DB/.pkgmgr*.db*
+# workaround TC-1624 (ail-initdb/pkg_initdb segfault in MIC)
+cat >/usr/lib/systemd/system/appfw_initdb.service  <<'EOF'
+[Unit]
+Description=First boot script for init App DB (workaround TC-1624)
+ConditionPathExists=!/usr/dbspace/.app_info.db
+Before=ac.service
+
+[Service]
+ExecStart=/usr/bin/ail_initdb ; /usr/bin/pkg_initdb
+Type=oneshot
+RemainAfterExit=yes
+EOF
+ln -s appfw_initdb.service /usr/lib/systemd/system/graphical.target.wants/
 
 # depends on generic-base functions
 function generic_desktop_applications_fix_userhome() {
