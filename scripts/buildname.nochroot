@@ -3,4 +3,9 @@ if [ -n "$IMG_NAME" ]; then
 	echo "BUILD_ID=$IMG_NAME" >> $INSTALL_ROOT/etc/tizen-release
 	echo "BUILD_ID=$IMG_NAME" >> $INSTALL_ROOT/etc/os-release
 	echo "$IMG_NAME @BUILD_ID@" >>$INSTALL_ROOT/etc/tizen-snapshot
+
+	sed -ri \
+		-e 's|@BUILD_ID[@]|@BUILD_ID@|g' \
+		-e "s|@BUILD_DATE[@]|$(date +%Y%m%d_%H%M%S)|g" \
+		$INSTALL_ROOT/etc/tizen-build.conf
 fi
