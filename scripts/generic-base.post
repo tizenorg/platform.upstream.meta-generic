@@ -69,10 +69,3 @@ function generic_base_fix_user_homedir() {
 	chown -R $user:users $homedir
 	return 0
 }
-
-# create appfw dirs for user 'app'
-generic_base_fix_user_homedir app
-
-# adjust app group: main group 'users', extra group 'app'
-usermod -g users app
-usermod -G app app

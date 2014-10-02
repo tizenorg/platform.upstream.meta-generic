@@ -17,8 +17,4 @@ function generic_desktop_applications_fix_userhome() {
 	chown -R $user:users $homedir/.applications/dbspace/
 }
 
-# fix app user
-generic_desktop_applications_fix_userhome app
-
-
 
