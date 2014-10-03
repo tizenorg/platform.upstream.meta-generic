@@ -48,6 +48,7 @@ function generic_base_fix_user_homedir() {
 	generic_base_user_exists $user || return 1
 
 	homedir=$(generic_base_user_home $user)
+	mkdir -p $homedir/app_rw
 	for appdir in desktop manifest dbspace; do
 		mkdir -p $homedir/.applications/$appdir
 	done
