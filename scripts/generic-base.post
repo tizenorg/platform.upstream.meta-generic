@@ -56,3 +56,7 @@ function generic_base_fix_user_homedir() {
 	chown -R $user:users $homedir
 	return 0
 }
+
+# fix TC-320 for SDK
+. /etc/tizen-build.conf
+[ "${TZ_BUILD_WITH_EMULATOR}" == "1" ] && generic_base_fix_user_homedir developer

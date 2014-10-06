@@ -17,4 +17,7 @@ function generic_desktop_applications_fix_userhome() {
 	chown -R $user:users $homedir/.applications/dbspace/
 }
 
+# fix TC-320 for SDK
+. /etc/tizen-build.conf
+[ "${TZ_BUILD_WITH_EMULATOR}" == "1" ] && generic_desktop_applications_fix_userhome developer
 
