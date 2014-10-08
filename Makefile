@@ -18,6 +18,7 @@ install:
 	install -d ${DESTDIR}/usr/share/image-configurations/generic/scripts
 	install -m 644 patterns/*.yaml ${DESTDIR}/usr/share/package-groups/generic
 	install -D scripts/* ${DESTDIR}/usr/share/image-configurations/generic/scripts
+	make -C src/generic-adaptation $@
 
 test:
 	merge-patterns -o output/ -p patterns -s
