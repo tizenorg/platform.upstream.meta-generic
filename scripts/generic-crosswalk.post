@@ -1,8 +1,3 @@
 #!/bin/sh
 echo "#################### generic-crosswalk.post ####################"
 
-# make crosswak start in user session (default target)
-mkdir -p /lib/systemd/user/default.target.wants/
-ln -s ../xwalk.service /lib/systemd/user/default.target.wants/
-
-
