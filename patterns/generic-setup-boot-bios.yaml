@@ -1,0 +1,7 @@
+Summary: Generic Setup Boot Bios
+Description: Generic Setup Boot Bios
+Name: generic-setup-boot-bios
+Packages:
+- setup-scripts-extlinux
+- setup-scripts-clone
+
