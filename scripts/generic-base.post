@@ -1,6 +1,17 @@
 #!/bin/sh
 echo "#################### generic-base.post ####################"
 
+build_ts=$(date -u +%s)
+build_date=$(date -u --date @$build_ts +%Y%m%d_%H%M%S)
+build_time=$(date -u --date @$build_ts +%H:%M:%S)
+
+sed -ri \
+	-e 's|@BUILD_ID[@]|@BUILD_ID@|g' \
+	-e "s|@BUILD_DATE[@]|$build_date|g" \
+	-e "s|@BUILD_TIME[@]|$build_time|g" \
+	-e "s|@BUILD_TS[@]|$build_ts|g" \
+	/etc/tizen-build.conf
+
 # setup systemd default target for user session
 cat <<'EOF' >>/lib/systemd/user/default.target
 [Unit]
@@ -60,3 +71,6 @@ function generic_base_fix_user_homedir() {
 # fix TC-320 for SDK
 . /etc/tizen-build.conf
 [ "${TZ_BUILD_WITH_EMULATOR}" == "1" ] && generic_base_fix_user_homedir developer
+
+# Add info.ini for system-info CAPI (TC-2047)
+/usr/bin/make_info_file.sh
