@@ -7,4 +7,10 @@ Packages:
 - enlightenment
 - user-session-units
 - xf86-input-evdev
-
+- xf86-module-xdbg
+- libxcb-dri3
+- libxcb-present
+- libxcb-sync
+- xdpyinfo
+- xeyes
+- xrandr
