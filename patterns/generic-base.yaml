@@ -31,3 +31,5 @@ Packages:
 - wpa_supplicant
 - prelink
 - usbutils
+- gum-utils
+- tlm
