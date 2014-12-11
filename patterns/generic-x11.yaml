@@ -5,7 +5,6 @@ Packages:
 - xorg-server
 - xorg-launch-helper
 - enlightenment
-- user-session-units
 - xf86-input-evdev
 - xf86-module-xdbg
 - libxcb-dri3
