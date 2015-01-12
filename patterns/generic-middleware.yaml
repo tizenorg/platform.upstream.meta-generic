@@ -2,7 +2,6 @@ Summary: Generic Middleware
 Description: Generic Middleware
 Name: generic-middleware
 Packages:
-- calendar-service
 - csf-framework
 - elm-misc
 - efl-theme-tizen-hd
