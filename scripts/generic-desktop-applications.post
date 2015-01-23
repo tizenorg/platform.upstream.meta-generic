@@ -1,10 +1,26 @@
 #!/bin/sh
 echo "#################### generic-desktop-applications.post ####################"
 
+function generic_desktop_applications_buxton_unprotect() {
+  chsmack -a '*' /var/lib/buxton || true
+  chsmack -a '*' /var/lib/buxton/* || true
+  chmod 0777 /var/lib/buxton || true
+  chmod 0666 /var/lib/buxton/* || true
+}
+
+function generic_desktop_applications_buxton_protect() {
+  chmod 0600 /var/lib/buxton/* || true
+  chmod 0700 /var/lib/buxton || true
+  chsmack -a System /var/lib/buxton/* || true
+  chsmack -a System /var/lib/buxton || true
+}
+
 # temp workaround to fill each user app_info database with global db infos
 . /etc/tizen-platform.conf
+generic_desktop_applications_buxton_unprotect
 ail_initdb
 pkg_initdb
+generic_desktop_applications_buxton_protect
 
 # depends on generic-base functions
 function generic_desktop_applications_fix_userhome() {
