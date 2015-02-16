@@ -38,5 +38,4 @@ make
 
 
 %files adaptation
-%{_sysconfdir}/profile.d/generic-adaptation.sh
 
