@@ -12,3 +12,4 @@ Packages:
 - sqlite3
 - sdbd
 - security-server
+- capi-system-sensor
