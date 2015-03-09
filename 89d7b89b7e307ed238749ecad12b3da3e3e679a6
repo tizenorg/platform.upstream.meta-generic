@@ -1,6 +1,14 @@
 Code-Review+2: Joonsub Lee <joon-sub.lee@samsung.com>
 Verified+1: Joonsub Lee <joon-sub.lee@samsung.com>
 Submitted-by: Stéphane Desneux (sdx) <stephane.desneux@open.eurogiciel.org>
+Submitted-at: Thu, 05 Mar 2015 02:47:12 -0700
+Reviewed-on: https://review.tizen.org/gerrit/36333
+Project: platform/upstream/meta-generic
+Branch: refs/heads/tizen
+
+Code-Review+2: Joonsub Lee <joon-sub.lee@samsung.com>
+Verified+1: Joonsub Lee <joon-sub.lee@samsung.com>
+Submitted-by: Stéphane Desneux (sdx) <stephane.desneux@open.eurogiciel.org>
 Submitted-at: Thu, 05 Mar 2015 01:47:12 -0800
 Reviewed-on: https://review.tizen.org/gerrit/36333
 Project: platform/upstream/meta-generic
