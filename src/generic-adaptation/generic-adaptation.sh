@@ -1,13 +1,4 @@
-do_gallium=true
-
-/usr/sbin/lspci \
-  | grep 'VGA compatible controller: VMware' >/dev/null 2>&1 \
-  || do_gallium=false
-
-if $do_gallium ; then
-  EGL_PLATFORM=gallium
-  export EGL_PLATFORM
-
-  EGL_DRIVER=egl_gallium
-  export EGL_DRIVER
+# enforce use of gallium inside VMware
+if /usr/sbin/lspci 2>/dev/null | grep -q 'VGA compatible controller: VMware'; then
+  export EGL_PLATFORM=gallium EGL_DRIVER=egl_gallium
 fi
