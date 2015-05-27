@@ -13,7 +13,7 @@ sed -ri \
 	/etc/tizen-build.conf
 
 # setup systemd default target for user session
-cat <<'EOF' >>/lib/systemd/user/default.target
+cat <<'EOF' >>/usr/lib/systemd/user/default.target
 [Unit]
 Description=User session default target
 EOF
