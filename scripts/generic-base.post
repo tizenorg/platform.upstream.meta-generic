@@ -13,11 +13,11 @@ sed -ri \
 	/etc/tizen-build.conf
 
 # setup systemd default target for user session
-cat <<'EOF' >>/lib/systemd/user/default.target
+cat <<'EOF' >>/usr/lib/systemd/user/default.target
 [Unit]
 Description=User session default target
 EOF
-mkdir -p /lib/systemd/user/default.target.wants
+mkdir -p /usr/lib/systemd/user/default.target.wants
 
 # start dbus session
 ln -s ../dbus.service /lib/systemd/user/default.target.wants/
