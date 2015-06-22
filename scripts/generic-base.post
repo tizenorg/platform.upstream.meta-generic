@@ -60,4 +60,4 @@ function generic_base_fix_user_homedir() {
 [ "${TZ_BUILD_WITH_EMULATOR}" == "1" ] && generic_base_fix_user_homedir developer
 
 # Add info.ini for system-info CAPI (TC-2047)
-/usr/bin/make_info_file.sh
+/etc/make_info_file.sh
