@@ -6,9 +6,15 @@ function generic_desktop_applications_buxton_unprotect() {
   chsmack -a '*' /var/lib/buxton/* || true
   chmod 0777 /var/lib/buxton || true
   chmod 0666 /var/lib/buxton/* || true
+
+  chmod 0777 /var/lib/buxton2 || true
+  chmod 0666 /var/lib/buxton2/* || true
 }
 
 function generic_desktop_applications_buxton_protect() {
+  chmod 0600 /var/lib/buxton2/* || true
+  chmod 0700 /var/lib/buxton2 || true
+
   chmod 0600 /var/lib/buxton/* || true
   chmod 0700 /var/lib/buxton || true
   chsmack -a System /var/lib/buxton/* || true
