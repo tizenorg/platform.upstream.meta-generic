@@ -2,11 +2,8 @@
 echo "#################### generic-desktop-applications.post ####################"
 
 function generic_desktop_applications_buxton_unprotect() {
-  chsmack -a '*' /var/lib/buxton || true
-  chsmack -a '*' /var/lib/buxton/* || true
-  chmod 0777 /var/lib/buxton || true
-  chmod 0666 /var/lib/buxton/* || true
-
+  chsmack -a '*' /var/lib/buxton2 || true
+  chsmack -a '*' /var/lib/buxton2/* || true
   chmod 0777 /var/lib/buxton2 || true
   chmod 0666 /var/lib/buxton2/* || true
 }
@@ -14,11 +11,8 @@ function generic_desktop_applications_buxton_unprotect() {
 function generic_desktop_applications_buxton_protect() {
   chmod 0600 /var/lib/buxton2/* || true
   chmod 0700 /var/lib/buxton2 || true
-
-  chmod 0600 /var/lib/buxton/* || true
-  chmod 0700 /var/lib/buxton || true
-  chsmack -a System /var/lib/buxton/* || true
-  chsmack -a System /var/lib/buxton || true
+  chsmack -a System /var/lib/buxton2/* || true
+  chsmack -a System /var/lib/buxton2 || true
 }
 
 # temp workaround to fill each user app_info database with global db infos
@@ -34,7 +28,7 @@ function generic_desktop_applications_fix_userhome() {
 
 	generic_base_user_exists $user || return 1
 	homedir=$(generic_base_user_home $user)
-	
+
 	echo "Fix app_info.db of $user"
 	chown -R $user:users $homedir/.applications/dbspace/
 }
