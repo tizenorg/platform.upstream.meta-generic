@@ -5,7 +5,6 @@ Packages:
 - alsa-utils
 - alsa-plugins-pulse
 - pulseaudio
-- pulseaudio-config
 - pulseaudio-locale
 - pulseaudio-module-bluetooth
 - pulseaudio-utils
