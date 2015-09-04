@@ -20,6 +20,7 @@ function generic_desktop_applications_buxton_protect() {
 generic_desktop_applications_buxton_unprotect
 ail_initdb
 pkg_initdb
+pkgdir_maker --create --allglobalpkgs
 generic_desktop_applications_buxton_protect
 
 # depends on generic-base functions
