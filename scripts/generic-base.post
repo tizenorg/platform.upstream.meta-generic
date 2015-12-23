@@ -22,11 +22,6 @@ mkdir -p /lib/systemd/user/default.target.wants
 # start dbus session
 ln -s ../dbus.service /lib/systemd/user/default.target.wants/
 
-# Run prelink to speed up dynamic binary/library loading
-/usr/sbin/prelink --all
-
-ln -sf /proc/self/mounts /etc/mtab
-
 # sdx: fix smack labels on /var/log
 chsmack -a '*' /var/log
 
