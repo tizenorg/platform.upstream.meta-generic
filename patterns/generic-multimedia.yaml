@@ -3,7 +3,6 @@ Description: Generic Multimedia
 Name: generic-multimedia
 Packages:
 - alsa-utils
-- alsa-plugins-pulse
 - pulseaudio
 - pulseaudio-locale
 - pulseaudio-module-bluetooth
