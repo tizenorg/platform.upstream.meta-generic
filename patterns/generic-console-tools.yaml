@@ -3,7 +3,6 @@ Description: Generic Console Tools
 Name: generic-console-tools
 Packages:
 - tar
-- wget
 - grep
 - gzip
 - zip
