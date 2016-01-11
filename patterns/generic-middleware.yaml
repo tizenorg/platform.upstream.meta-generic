@@ -2,7 +2,7 @@ Summary: Generic Middleware
 Description: Generic Middleware
 Name: generic-middleware
 Packages:
-- csf-framework
+- csr-framework
 - elm-misc
 - efl-theme-tizen-hd
 - evolution-data-server
