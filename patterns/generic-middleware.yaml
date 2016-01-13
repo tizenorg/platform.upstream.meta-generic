@@ -5,7 +5,6 @@ Packages:
 - csr-framework
 - elm-misc
 - efl-theme-tizen-hd
-- evolution-data-server
 - libprivilege-control-conf
 - notification-service
 - pkgmgr-server
