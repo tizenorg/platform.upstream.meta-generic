@@ -3,3 +3,4 @@ Description: Generic Adaptation
 Name: generic-adaptation
 Packages:
 - linux-firmware
+- system-plugin
