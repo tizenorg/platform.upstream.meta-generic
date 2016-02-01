@@ -6,6 +6,7 @@ Packages:
 - pulseaudio
 - pulseaudio-locale
 - pulseaudio-module-bluetooth
+- pulseaudio-modules-tizen
 - pulseaudio-utils
 - gst-plugins-bad
 - gst-plugins-base
