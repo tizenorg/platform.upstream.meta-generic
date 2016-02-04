@@ -4,6 +4,5 @@ Name: generic-wayland
 Packages:
 - cantarell-fonts
 - dejavu-fonts
-- weston
 - xkeyboard-config
 - tizen-branding-default
