@@ -53,3 +53,6 @@ Packages:
 - nghttp2
 - pubkey-pinning
 - crash-worker
+- app-installers
+- tpk-backend
+- wgt-backend
