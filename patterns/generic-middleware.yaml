@@ -15,7 +15,7 @@ Packages:
 - libcynara-creds-gdbus
 - libcynara-creds-socket
 - cert-svc
-- capi-security-privilege-manager
+- security-privilege-manager
 - privilege-checker
 - privilege-info
 - contacts-service2
