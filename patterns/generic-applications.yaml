@@ -4,4 +4,3 @@ Name: generic-applications
 Packages:
 - ail
 - ca-certificates
-- ca-certificates-mozilla

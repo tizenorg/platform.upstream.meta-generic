@@ -10,5 +10,4 @@ Packages:
 - xz
 - curl
 - findutils
-- ca-certificates-mozilla
 - iptables
