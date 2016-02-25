@@ -25,7 +25,6 @@ Packages:
 - elm-misc
 - efl-theme-tizen-hd
 - libprivilege-control-conf
-- notification-service
 - pkgmgr-server
 - pkgmgr-tool
 - sqlite3
