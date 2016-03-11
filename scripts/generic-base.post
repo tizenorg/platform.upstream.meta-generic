@@ -11,11 +11,6 @@ test -d /home && cp -arf /home/* /opt/home/
 rm -rf /home
 ln -snf opt/home /home
 
-test ! -e /opt/etc/smack && mkdir -p /opt/etc/smack
-test -d /etc/smack && cp -arf /etc/smack/* /opt/etc/smack/
-rm -rf /etc/smack
-ln -snf ../opt/etc/smack /etc/smack
-
 build_ts=$(date -u +%s)
 build_date=$(date -u --date @$build_ts +%Y%m%d_%H%M%S)
 build_time=$(date -u --date @$build_ts +%H:%M:%S)
