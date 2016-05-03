@@ -19,7 +19,6 @@ function generic_desktop_applications_buxton_protect() {
 . /etc/tizen-platform.conf
 generic_desktop_applications_buxton_unprotect
 ail_initdb
-pkgdir-tool --create --allglobalpkgs
 generic_desktop_applications_buxton_protect
 
 # depends on generic-base functions
