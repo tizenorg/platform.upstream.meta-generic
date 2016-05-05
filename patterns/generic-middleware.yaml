@@ -22,7 +22,6 @@ Packages:
 - calendar-service
 - cairo
 - csr-framework
-- libprivilege-control-conf
 - pkgmgr-server
 - pkgmgr-tool
 - sqlite3
