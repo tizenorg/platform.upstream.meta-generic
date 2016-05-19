@@ -1,0 +1,7 @@
+#!/bin/sh
+echo "#################### generic-security.post ####################"
+
+if [ -e /usr/share/security-config/set_capability ]; then
+	echo 'Give capabilities to daemons via set_capability from security-config package'
+	/usr/share/security-config/set_capability
+fi
