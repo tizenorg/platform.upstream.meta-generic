@@ -6,5 +6,5 @@ Packages:
 - bluetooth-frwk-core
 - bluetooth-frwk-service
 - bluetooth-share
-- bluetooth-tools-no-firmware
+- bluetooth-scripts
 - obexd
