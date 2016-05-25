@@ -18,7 +18,6 @@ function generic_desktop_applications_buxton_protect() {
 # temp workaround to fill each user app_info database with global db infos
 . /etc/tizen-platform.conf
 generic_desktop_applications_buxton_unprotect
-ail_initdb
 pkgdir-tool --create --allglobalpkgs
 generic_desktop_applications_buxton_protect
 
