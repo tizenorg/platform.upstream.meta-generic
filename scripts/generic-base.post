@@ -6,10 +6,10 @@ test -d /var && cp -arf /var/* /opt/var/
 rm -rf /var
 ln -snf opt/var /var
 
-test ! -e /opt/home && mkdir -p /opt/home
-test -d /home && cp -arf /home/* /opt/home/
+test ! -e /opt/usr/home && mkdir -p /opt/usr/home
+test -d /home && cp -arf /home/* /opt/usr/home/
 rm -rf /home
-ln -snf opt/home /home
+ln -snf opt/usr/home /home
 
 build_ts=$(date -u +%s)
 build_date=$(date -u --date @$build_ts +%Y%m%d_%H%M%S)
