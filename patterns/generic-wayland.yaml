@@ -2,6 +2,4 @@ Summary: Generic Wayland
 Description: Generic Wayland
 Name: generic-wayland
 Packages:
-- cantarell-fonts
-- dejavu-fonts
 - xkeyboard-config
