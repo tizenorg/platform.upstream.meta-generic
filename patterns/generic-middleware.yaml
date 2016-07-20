@@ -35,7 +35,7 @@ Packages:
 - data-control
 - ttrace
 - stt
-- libttssmt
+- org.tizen.tts-engine-default
 - eventsystem
 - vconf-internal-keys
 - toybox
